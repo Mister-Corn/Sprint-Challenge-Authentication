@@ -1,6 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const cors = require('cors');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 const routes = require('./api/routes/routes');
 
@@ -11,8 +13,10 @@ const corsOptions = {
   // then pass this object to the cors() function
 };
 
-server.use(bodyParser.json());
+server.use(helmet());
 server.use(cors());
+server.use(morgan('dev'));
+server.use(bodyParser.json());
 
 routes(server);
 
