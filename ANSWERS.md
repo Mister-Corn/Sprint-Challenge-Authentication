@@ -20,4 +20,4 @@ The three parts are:
 
 * `header`: contains general information about the token, such as algorithms used to generate it.
 * `payload`: contains data we want to store in the token. In projects this week, we stored a user's name within it.
-* `secret`: the key used to encrypt and decrypt the token. The client, or anyone else but the server, should know this. It will be used by the server to generate and validiate the token.
+* `secret`: the key used to encrypt and decrypt the token. The client, or anyone else but the server, should not know this. It will be used by the server to generate and validiate the token.
