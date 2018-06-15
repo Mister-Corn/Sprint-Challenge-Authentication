@@ -44,6 +44,8 @@ class Jokes extends Component {
         <Fragment>
           <h5>{joke.setup}</h5>
           <h5>{joke.punchline}</h5>
+          <h6>{joke.type}</h6>
+          <hr/>
         </Fragment>
       );
     })

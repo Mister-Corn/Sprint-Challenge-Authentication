@@ -34,8 +34,8 @@ class LoginForm extends React.Component {
       .then(res => {
         console.log(res.data.token);
         console.log("received token:",res.data.token);
-        this.props.send(res.data.token);
         this.setState({ ...this.reset });
+        this.props.send(res.data.token);
       })
       .catch(err => {
         console.log("submitAndSignup ERROR:",err);
@@ -48,8 +48,8 @@ class LoginForm extends React.Component {
       .then(res => {
         console.log("submitAndSignin `this`:",this);
         console.log("received token:",res.data.token);
-        this.props.send(res.data.token);
         this.setState({ ...this.reset });
+        this.props.send(res.data.token);
       })
       .catch(err => {
         console.log("submitAndSignin ERROR:",err);
